@@ -4,6 +4,9 @@ from .models import Question, Choice
 # Register your models here.
 # admin.site.register(Question)
 # admin.site.register(Choice)
+admin.site.site_header = "Pollster Admin"
+admin.site.site_title = "Pollster Admin Area"
+admin.site.index_title = "Welcome to Pollster Admin Area"
 
 class ChoiceInline(admin.TabularInline):
     model = Choice
@@ -16,4 +19,5 @@ class QuestionAdmin(admin.ModelAdmin):
     inlines = [ChoiceInline]
 
 admin.site.register(Question, QuestionAdmin)
+
     
